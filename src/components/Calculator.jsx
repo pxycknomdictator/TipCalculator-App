@@ -3,6 +3,9 @@ import InputPrice from "./InputPrice.jsx";
 import Logo from "./Logo.jsx";
 import CustomerLogo from "../assets/images/icon-person.svg";
 import dollar from "../assets/images/icon-dollar.svg";
+import Percentage from "./Percentage.jsx";
+import Custom from "./Custom.jsx";
+import data from "./data/Data.json";
 
 const Calculator = () => {
   return (
@@ -11,7 +14,6 @@ const Calculator = () => {
       className="w-screen h-screen bg-Light_grayish_cyan flex items-center justify-center"
     >
       <div id="container" className="w-[50rem]">
-
         <Logo />
 
         <div
@@ -20,13 +22,26 @@ const Calculator = () => {
         >
           <div id="calculationPart" className="rounded-lg p-[.3rem]">
             <InputPrice logo={dollar} title="Bill" />
+            <div className="my-6">
+              <p className="mb-2 text-Very_dark_cyan font-semibold">
+                Select Tip %
+              </p>
+              <div
+                id="percentContainer"
+                className="grid grid-cols-2 md:grid-cols-3 gap-3"
+              >
+                {data.map((elements, index) => (
+                  <Percentage key={index} tips={elements} />
+                ))}
+                <Custom />
+              </div>
+            </div>
             <InputPrice logo={CustomerLogo} title="Number of People" />
           </div>
 
           <div id="summaryPart">
             <h1>right part</h1>
           </div>
-
         </div>
       </div>
     </div>

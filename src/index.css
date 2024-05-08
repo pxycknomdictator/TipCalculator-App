@@ -2,9 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    html {
-        font-family: "Space Mono", monospace;
+  html {
+    font-family: "Space Mono", monospace;
+  }
+}
+
+@layer utilities {
+  #percentBox {
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+  }
+  .percent {
+    color: white;
+
+    &::after {
+      content: "%";
     }
   }
+  #input,
+  #customBox {
+    outline: none;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+
+    &:focus {
+      border: 2px solid hsl(172, 67%, 45%);
+    }
+  }
+
+  .error{
+    border: 2px solid red;
+  }
+
+}
