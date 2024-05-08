@@ -6,6 +6,7 @@ import dollar from "../assets/images/icon-dollar.svg";
 import Percentage from "./Percentage.jsx";
 import Custom from "./Custom.jsx";
 import data from "./data/Data.json";
+import Total from "./Total.jsx";
 
 const Calculator = () => {
   return (
@@ -18,7 +19,7 @@ const Calculator = () => {
 
         <div
           id="calculatorBody"
-          className="bg-White rounded-lg p-4 grid grid-cols-2 mt-9"
+          className="bg-White rounded-lg p-4 grid grid-cols-2 mt-9 gap-7"
         >
           <div id="calculationPart" className="rounded-lg p-[.3rem]">
             <InputPrice logo={dollar} title="Bill" />
@@ -39,8 +40,12 @@ const Calculator = () => {
             <InputPrice logo={CustomerLogo} title="Number of People" />
           </div>
 
-          <div id="summaryPart">
-            <h1>right part</h1>
+          <div
+            id="summaryPart"
+            className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between"
+          >
+            <Total />
+            <button id="reset" className="bg-Strong_cyan text-Very_dark_cyan font-semibold text-2xl py-1 rounded-md hover:bg-Light_grayish_cyan">Reset</button>
           </div>
         </div>
       </div>

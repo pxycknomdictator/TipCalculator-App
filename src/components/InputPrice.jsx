@@ -12,7 +12,7 @@ const InputPrice = ({ logo, title }) => {
         />
         <input
           id="input"
-          className={`w-full text-right text-Very_dark_cyan font-semibold text-2xl  bg-Very_light_grayish_cyan outline-none py-2 pr-5`}
+          className={`cursor w-full text-right text-Very_dark_cyan font-semibold text-2xl  bg-Very_light_grayish_cyan outline-none py-2 pr-5`}
           type="text"
           placeholder="0"
         />

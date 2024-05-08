@@ -31,8 +31,19 @@
     }
   }
 
+  .cursor{
+    cursor: pointer;
+  }
+
   .error{
     border: 2px solid red;
   }
 
+  #amount::before{
+    content: "$";
+  }
+
+  #reset{
+    transition: all .25s ease-in-out;
+  }
 }
