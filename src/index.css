@@ -5,6 +5,9 @@
 @layer base {
   html {
     font-family: "Space Mono", monospace;
+    width: 100%;
+    height: 100%;
+    background: hsl(185, 41%, 84%);
   }
 }
 

@@ -10,8 +10,8 @@ import Total from "./Total.jsx";
 
 const Calculator = () => {
   return (
-    <div className="w-screen h-screen bg-Light_grayish_cyan flex justify-center md:items-center">
-      <div className="mt-6 md:mt-0 w-[40rem] md:w-[45rem] lg:w-[50rem] mx-auto">
+    <div className="w-screen h-screen flex justify-center md:items-center">
+      <div className="mt-12 md:mt-0 w-[85%] md:w-[45rem] lg:w-[50rem] mx-auto">
         <Logo />
 
         <div className="bg-White rounded-2xl p-4 grid md:grid-cols-2 mt-9 gap-7">
