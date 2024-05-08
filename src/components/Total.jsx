@@ -2,8 +2,8 @@ import React from "react";
 
 const Total = ({ title, user }) => {
   return (
-    <div id="box" className="flex justify-between">
-      <div id="tipAmount">
+    <div className="flex justify-between">
+      <div>
         <p>{title}</p>
         <span className="text-Grayish_cyan">{user}</span>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const InputPrice = ({ logo, title }) => {
   return (
-    <div className="w-full bg-orange-500">
+    <div className="w-full">
       <p className="text-Very_dark_cyan font-semibold mb-2">{title}</p>
       <div className=" bg-Very_light_grayish_cyan justify-between rounded-md relative">
         <img

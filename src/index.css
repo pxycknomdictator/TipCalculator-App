@@ -31,19 +31,19 @@
     }
   }
 
-  .cursor{
+  .cursor {
     cursor: pointer;
   }
 
-  .error{
+  .error {
     border: 2px solid red;
   }
 
-  #amount::before{
+  #amount::before {
     content: "$";
   }
 
-  #reset{
-    transition: all .25s ease-in-out;
+  #reset {
+    transition: all 0.25s ease-in-out;
   }
 }

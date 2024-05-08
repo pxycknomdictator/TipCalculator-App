@@ -10,30 +10,18 @@ import Total from "./Total.jsx";
 
 const Calculator = () => {
   return (
-    <div
-      id="mainBody"
-      className="w-screen h-screen bg-Light_grayish_cyan flex justify-center md:items-center"
-    >
-      <div
-        id="container"
-        className="mt-6 md:mt-0 w-[40rem] md:w-[45rem] lg:w-[50rem] mx-auto"
-      >
+    <div className="w-screen h-screen bg-Light_grayish_cyan flex justify-center md:items-center">
+      <div className="mt-6 md:mt-0 w-[40rem] md:w-[45rem] lg:w-[50rem] mx-auto">
         <Logo />
 
-        <div
-          id="calculatorBody"
-          className="bg-White rounded-2xl p-4 grid md:grid-cols-2 mt-9 gap-7"
-        >
-          <div id="calculationPart" className="rounded-lg p-[.3rem]">
+        <div className="bg-White rounded-2xl p-4 grid md:grid-cols-2 mt-9 gap-7">
+          <div className="rounded-lg p-[.3rem]">
             <InputPrice logo={dollar} title="Bill" />
             <div className="my-6">
               <p className="mb-2 text-Very_dark_cyan font-semibold">
                 Select Tip %
               </p>
-              <div
-                id="percentContainer"
-                className="grid grid-cols-2 md:grid-cols-3 gap-3"
-              >
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {data.map((elements, index) => (
                   <Percentage key={index} tips={elements} />
                 ))}
@@ -43,10 +31,7 @@ const Calculator = () => {
             <InputPrice logo={CustomerLogo} title="Number of People" />
           </div>
 
-          <div
-            id="summaryPart"
-            className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between gap-5"
-          >
+          <div className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between gap-5">
             <div className="flex flex-col gap-4">
               <Total title="Tip Amount" user="/ Person" />
               <Total title="Total" user="/ Person" />
