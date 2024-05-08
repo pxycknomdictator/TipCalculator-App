@@ -12,14 +12,17 @@ const Calculator = () => {
   return (
     <div
       id="mainBody"
-      className="w-screen h-screen bg-Light_grayish_cyan flex items-center justify-center"
+      className="w-screen h-screen bg-Light_grayish_cyan flex justify-center md:items-center"
     >
-      <div id="container" className="w-[50rem]">
+      <div
+        id="container"
+        className="mt-6 md:mt-0 w-[40rem] md:w-[45rem] lg:w-[50rem] mx-auto"
+      >
         <Logo />
 
         <div
           id="calculatorBody"
-          className="bg-White rounded-lg p-4 grid grid-cols-2 mt-9 gap-7"
+          className="bg-White rounded-2xl p-4 grid md:grid-cols-2 mt-9 gap-7"
         >
           <div id="calculationPart" className="rounded-lg p-[.3rem]">
             <InputPrice logo={dollar} title="Bill" />
@@ -42,10 +45,18 @@ const Calculator = () => {
 
           <div
             id="summaryPart"
-            className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between"
+            className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between gap-5"
           >
-            <Total />
-            <button id="reset" className="bg-Strong_cyan text-Very_dark_cyan font-semibold text-2xl py-1 rounded-md hover:bg-Light_grayish_cyan">Reset</button>
+            <div className="flex flex-col gap-4">
+              <Total title="Tip Amount" user="/ Person" />
+              <Total title="Total" user="/ Person" />
+            </div>
+            <button
+              id="reset"
+              className="bg-Strong_cyan text-Very_dark_cyan font-semibold text-2xl py-1 rounded-md hover:bg-Light_grayish_cyan"
+            >
+              Reset
+            </button>
           </div>
         </div>
       </div>
