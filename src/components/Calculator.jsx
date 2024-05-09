@@ -7,6 +7,7 @@ import Percentage from "./Percentage.jsx";
 import Custom from "./Custom.jsx";
 import data from "./data/Data.json";
 import Total from "./Total.jsx";
+import InputPerson from "./InputPerson.jsx";
 
 const Calculator = () => {
   return (
@@ -28,7 +29,7 @@ const Calculator = () => {
                 <Custom />
               </div>
             </div>
-            <InputPrice logo={CustomerLogo} title="Number of People" />
+           <InputPerson logo={CustomerLogo} title={"Number of persons"} />
           </div>
 
           <div className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between gap-5">
