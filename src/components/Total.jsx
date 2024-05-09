@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 
-const Total = ({ title, user }) => {
+const Total = ({ title, user, displayAmount, displayPersonAmount }) => {
   return (
     <div className="flex justify-between">
       <div>
@@ -9,7 +9,8 @@ const Total = ({ title, user }) => {
       </div>
       <div>
         <span id="amount" className="text-4xl text-Strong_cyan font-semibold">
-          0.00
+          {displayAmount}
+          {displayPersonAmount}
         </span>
       </div>
     </div>

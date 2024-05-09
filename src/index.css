@@ -34,11 +34,15 @@
     }
   }
 
+  #color {
+    color: red;
+  }
+
   .cursor {
     cursor: pointer;
   }
 
-  .error {
+  #error {
     border: 2px solid red;
   }
 

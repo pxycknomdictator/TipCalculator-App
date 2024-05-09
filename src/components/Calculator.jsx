@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import InputPrice from "./InputPrice.jsx";
 import Logo from "./Logo.jsx";
 import CustomerLogo from "../assets/images/icon-person.svg";
@@ -8,10 +8,14 @@ import Custom from "./Custom.jsx";
 import data from "./data/Data.json";
 import Total from "./Total.jsx";
 import InputPerson from "./InputPerson.jsx";
+import TipContext from "./Context-api/TipContext.js";
 
 const Calculator = () => {
+  const { displayAmount, displayPersonAmount, resetAll } =
+    useContext(TipContext);
+
   return (
-    <div className="w-screen h-screen flex justify-center md:items-center">
+    <div className="w-screen h-screen flex justify-center md:items-center overflow-auto">
       <div className="mt-12 md:mt-0 w-[85%] md:w-[45rem] lg:w-[50rem] mx-auto">
         <Logo />
 
@@ -29,16 +33,25 @@ const Calculator = () => {
                 <Custom />
               </div>
             </div>
-           <InputPerson logo={CustomerLogo} title={"Number of persons"} />
+            <InputPerson logo={CustomerLogo} title={"Number of persons"} />
           </div>
 
           <div className="bg-Very_dark_cyan rounded-xl text-White pt-10 pb-7 px-6 flex flex-col justify-between gap-5">
             <div className="flex flex-col gap-4">
-              <Total title="Tip Amount" user="/ Person" />
-              <Total title="Total" user="/ Person" />
+              <Total
+                title="Tip Amount"
+                user="/ Person"
+                displayAmount={displayAmount}
+              />
+              <Total
+                title="Total"
+                user="/ Person"
+                displayPersonAmount={displayPersonAmount}
+              />
             </div>
             <button
               id="reset"
+              onClick={resetAll}
               className="bg-Strong_cyan text-Very_dark_cyan font-semibold text-2xl py-1 rounded-md hover:bg-Light_grayish_cyan"
             >
               Reset
