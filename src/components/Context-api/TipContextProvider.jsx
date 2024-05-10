@@ -83,8 +83,9 @@ const TipContextProvider = ({ children }) => {
   const resetAll = () => {
     setBillInput("");
     setPersonsInput("");
-    setDisplayAmount("");
-    setDisplayPersonAmount("");
+    setDisplayAmount("0");
+    setDisplayPersonAmount("0");
+    setCustoms("Custom")
   };
 
   return (
